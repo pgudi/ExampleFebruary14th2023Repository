@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="test cases">
+   <test name="users">
+   <parameter name="username" value="demoUSer12345"></parameter>
+   		<classes>
+   			<class name="com.sgtesting.parameterization.Users"></class>
+   		</classes>
+   </test>
+</suite>

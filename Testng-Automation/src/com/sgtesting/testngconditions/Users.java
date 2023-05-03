@@ -1,0 +1,39 @@
+package com.sgtesting.testngconditions;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class Users {
+	
+	@Test(priority = 1)
+	public void createUser()
+	{
+		System.out.println("The User demoUser1 has created successfully");
+	}
+
+	@Test(priority = 2,enabled = false)
+	public void modifyUser()
+	{
+		System.out.println("The User demoUser1 has modified successfully");
+	}
+	
+	@Test(priority = 3)
+	public void deleteUser()
+	{
+		System.out.println("The User demoUser1 has deleted successfully");
+	}
+	
+	@BeforeClass
+	public void setup()
+	{
+		System.out.println("Launch Browser, Navigate URL and Login into the Application");
+	}
+	
+	@AfterClass
+	public void tearDown()
+	{
+		System.out.println("Logout from the Application and Close the Application");
+		System.out.println("+++++++++++++++++++++++++++");
+	}
+}
