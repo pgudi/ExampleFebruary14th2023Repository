@@ -50,12 +50,12 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter username in username text field
 	 */
-	@When("^I enter username in username text field$")
-	public void i_enter_username_in_username_text_field()
+	@When("^I enter \"(.*)\" in username text field$")
+	public void i_enter_username_in_username_text_field(String username)
 	{
 		try
 		{
-			oBrowser.findElement(By.id("username")).sendKeys("admin");
+			oBrowser.findElement(By.id("username")).sendKeys(username);
 		}catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -66,12 +66,12 @@ public class StepDefinitions {
 	 * Author:
 	 * Step Name: I enter password in password text field
 	 */
-	@And("^I enter password in password text field$")
-	public void i_enter_password_in_password_text_field()
+	@And("^I enter \"(.*)\" in password text field$")
+	public void i_enter_password_in_password_text_field(String password)
 	{
 		try
 		{
-			oBrowser.findElement(By.name("pwd")).sendKeys("manager");
+			oBrowser.findElement(By.name("pwd")).sendKeys(password);
 		}catch (Exception e) 
 		{
 			e.printStackTrace();
@@ -179,5 +179,17 @@ public class StepDefinitions {
 		{
 			e.printStackTrace();
 		}
+	}
+	
+	@Given("^I open the Database Oracle 11g$")
+	public void I_open_the_Database_Oracle_11g()
+	{
+		System.out.println("I open the Database Oracle 11g");
+	}
+	
+	@And("^I connect to Database Oracle 11g$")
+	public void I_connect_to_Database_Oracle_11g()
+	{
+		System.out.println("I connect to Database Oracle 11g");
 	}
 }
